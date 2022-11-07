@@ -1,0 +1,264 @@
+@font-face {
+  font-family: "Grotesk";
+  src: url("../fonts/reforma-grotesk-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url("../fonts/reforma-grotesk-demi.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url("../fonts/reforma-grotesk-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Grotesk", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #fff;
+
+  background-color: #141414;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation {
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 150px;
+  line-height: 188px;
+  text-transform: uppercase;
+  color: #db3138;
+}
+
+.hero-description {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.contacts {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contacts-title {
+  font-weight: inherit;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.contacts-description {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: #db3138;
+}
+
+.achievements {
+  letter-spacing: 0.05em;
+}
+
+.achievements-title {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 73px;
+  text-transform: uppercase;
+}
+
+.achievements-description {
+  letter-spacing: 0.03em;
+}
+
+.achievements-list {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.achievements-item {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.achievements-place {
+  font-size: 24px;
+  line-height: 34px;
+  color: #db3138;
+}
+
+.achievements-place b {
+  font-weight: inherit;
+  font-size: 52px;
+  line-height: 72px;
+}
+
+.gallery-text-wrapper {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.benefits-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.benefits-description {
+  letter-spacing: 0.03em;
+}
+
+.slider-description {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.services-title {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 73px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.services-button {
+  font-size: 32px;
+  line-height: 45px;
+}
+
+.services-list {
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.service-title {
+  font-weight: inherit;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.service-description {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.service-link {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.works-title {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 73px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.questions-title {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 73px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-input,
+.form-textarea {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #898989;
+}
+
+.form-textarea {
+  display: block;
+  resize: none;
+}
+
+.form-button {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.questions-contacts {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.footer-divider {
+  border-color: #898989;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
