@@ -128,9 +128,8 @@ body {
 .hero-link {
   display: block;
   margin: 0 auto 103px;
-  padding: 15px 25px 12px;
+  padding: 15px 25px;
   width: min-content;
-
 }
 
 .contacts {
@@ -169,13 +168,19 @@ body {
   color: #db3138;
 }
 
+.contacts-description:first-of-type {
+  margin-bottom: 15px;
+}
+
 .achievements {
+  box-sizing: border-box;
+  min-height: 1015px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 
   letter-spacing: 0.05em;
-  padding: 180px 312px;
+  padding: 180px 312px 90px;
 }
 
 .achievements-title {
@@ -194,6 +199,9 @@ body {
 }
 
 .achievements-list {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -202,11 +210,28 @@ body {
 }
 
 .achievements-item {
+  box-sizing: border-box;
+  border: 1px solid #898989;
+  min-height: 177px;
+  width: 318px;
+  text-align: center;
   font-size: 16px;
   line-height: 22px;
+  margin-top: -1px;
+  margin-left: -1px;
+  padding: 25px 20px 35px;
+}
+
+.achievements-item:nth-child(even) {
+  transform: translateY(40px);
+}
+
+.achievements-item:last-child {
+  padding-top: 98px;
 }
 
 .achievements-place {
+  display: block;
   font-size: 24px;
   line-height: 34px;
   color: #db3138;
@@ -221,7 +246,7 @@ body {
 .gallery {
   display: flex;
   gap: 24px;
-  padding: 0 312px;
+  padding: 90px 312px;
 }
 
 .gallery-text-wrapper {
@@ -234,13 +259,24 @@ body {
 
 .gallery-image {
   text-align: center;
+  display: block;
+}
+
+.image-description {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -43px;
+  background-color: #db3138;
+  padding: 30px 40px;
+  box-sizing: border-box;
 }
 
 .benefits-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 134px;
-  padding: 180px 312px;
+  padding: 90px 312px;
 }
 
 .benefits-list {
@@ -251,6 +287,7 @@ body {
 
 .benefits-title {
   margin: 0;
+  margin-left: 100px;
   margin-bottom: 43px;
   font-weight: 600;
   font-size: 32px;
@@ -281,7 +318,7 @@ body {
 }
 
 .services {
-  padding: 0 312px;
+  padding: 90px 312px;
   text-align: center;
 }
 
@@ -300,6 +337,16 @@ body {
   font-size: 32px;
   line-height: 45px;
   margin-bottom: 80px;
+  padding: 20px 40px;
+  background: none;
+}
+
+.services-button:not(:last-of-type) {
+  margin-right: 60px;
+}
+
+.services-button-current {
+  background-color: #db3138;
 }
 
 .services-list {
@@ -326,6 +373,7 @@ body {
   font-weight: inherit;
   font-size: 24px;
   line-height: 34px;
+  text-transform: uppercase;
 }
 
 .service-description {
@@ -338,6 +386,11 @@ body {
 .service-link {
   font-size: 18px;
   line-height: 25px;
+  padding: 10px 20px;
+}
+
+.works {
+  padding: 90px 0;
 }
 
 .works-title {
@@ -357,7 +410,7 @@ body {
 }
 
 .questions {
-  padding: 120px 642px 100px;
+  padding: 30px 642px 100px;
 }
 
 .questions-wrapper {
@@ -404,6 +457,8 @@ body {
   resize: none;
   margin-right: 110px;
   grid-column: 1 / -1;
+  min-height: 150px;
+  box-sizing: border-box;
 }
 
 .form-button {
@@ -413,10 +468,28 @@ body {
   width: min-content;
 }
 
-.questions-contacts {
+.social {
+  max-height: 150px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  gap: 15px;
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 73px;
+}
+
+.social-link {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #898989;
+}
+
+.questions-contacts {
+  position: relative;
+  left: 335px;
+  bottom: 60px;
 
   width: 300px;
   display: flex;
@@ -431,8 +504,8 @@ body {
   letter-spacing: 0.05em;
 }
 
-.contacts-link:not(:last-child) {
-  margin-left: 15px;
+.contacts-link:last-child {
+  margin-left: 45px;
 }
 
 .footer-divider {
@@ -440,7 +513,7 @@ body {
   margin: 0;
 }
 
-.footer{
+.footer {
   padding: 0 312px;
   display: flex;
   align-items: center;
