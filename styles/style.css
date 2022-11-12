@@ -22,6 +22,8 @@
   font-display: swap;
 }
 
+
+/* Общие правила */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -74,23 +76,76 @@ body {
   text-decoration: none;
   color: inherit;
   background-color: #db3138;
+  cursor: pointer;
 }
 
+/* Кнопки слайдеров */
+.button-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: calc(50% - 25px);
+  left: 0;
+}
+
+.button-prev,
+.button-next {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #db3138;
+  background: transparent url("../images/arrow-icon.svg") no-repeat center;
+}
+
+.button-prev {
+  transform: rotate(-45deg);
+  margin-left: 15px;
+}
+
+.button-next {
+  transform: rotate(135deg);
+  margin-right: 15px;
+}
+
+/* ссылки */
 .link {
   text-decoration: none;
   color: inherit;
 }
 
-.header {
-  padding: 0 312px;
+/* Заголовки */
+.title {
+  position: relative;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
+.title::before {
+  content: "";
+  position: absolute;
+  background: url("../images/decorative-square.svg") no-repeat;
+  width: 146px;
+  height: 15px;
+}
+
+/* Шапка сайта */
+.header {
+  padding: 0 312px 0 292px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Навигация */
 .navigation {
   letter-spacing: 0.03em;
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
+  width: 700px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -101,21 +156,33 @@ body {
   padding: 40px 20px;
 }
 
-.navigation-item:first-child .navigation-link {
-  padding-left: 0;
+/* Кнопка меню */
+.navigation-button {
+  box-sizing: border-box;
+  min-width: 50px;
+  min-height: 109px;
+  padding: 40px 20px;
+  background: url("../images/menu-icon.svg") no-repeat center;
+  text-decoration: none;
+  color: inherit;
 }
 
+/* Блок герой */
 .hero {
   text-align: center;
   padding-top: 148px;
 }
 
 .hero-title {
-  margin: 0;
+  margin-bottom: 61px;
   font-size: 150px;
   line-height: 188px;
-  text-transform: uppercase;
   color: #db3138;
+}
+
+.hero-title::before {
+  bottom: -20px;
+  left: calc(50% - 73px);
 }
 
 .hero-description {
@@ -129,9 +196,10 @@ body {
   display: block;
   margin: 0 auto 103px;
   padding: 15px 25px;
-  width: min-content;
+  width: max-content;
 }
 
+/* Контакты */
 .contacts {
   display: flex;
   font-weight: 600;
@@ -152,11 +220,13 @@ body {
 }
 
 .contacts-title {
-  margin: 0;
   margin-bottom: 20px;
-  font-weight: inherit;
   font-size: 18px;
   line-height: 25px;
+}
+
+.contacts-title::before {
+  display: none;
 }
 
 .contacts-description {
@@ -172,6 +242,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Достижения */
 .achievements {
   box-sizing: border-box;
   min-height: 1015px;
@@ -184,12 +255,14 @@ body {
 }
 
 .achievements-title {
-  margin: 0;
   margin-bottom: 115px;
-  font-weight: 600;
   font-size: 52px;
   line-height: 73px;
-  text-transform: uppercase;
+}
+
+.achievements-title::before {
+  bottom: -60px;
+  left: 0;
 }
 
 .achievements-description {
@@ -243,7 +316,9 @@ body {
   line-height: 72px;
 }
 
+/* Галерея-слайдер */
 .gallery {
+  position: relative;
   display: flex;
   gap: 24px;
   padding: 90px 312px;
@@ -272,28 +347,57 @@ body {
   box-sizing: border-box;
 }
 
+/* Кнопки слайдера */
+.gallery .button-prev {
+  margin-top: -30px;
+  margin-left: 200px;
+}
+
+.gallery .button-next {
+  margin-top: -30px;
+  margin-right: 200px;
+}
+
+/* Обертка для блока преимуществ и слайдера */
 .benefits-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 134px;
   padding: 90px 312px;
+  align-items: center;
 }
 
+/* Преимущества */
 .benefits-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.benefits-item {
+  position: relative;
+}
+
+.benefits-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  bottom: -55px;
+  left: calc(50% - 73px);
+  width: 146px;
+  height: 15px;
+  background: url("../images/decorative-square.svg") no-repeat;
+}
+
 .benefits-title {
-  margin: 0;
   margin-left: 100px;
   margin-bottom: 43px;
-  font-weight: 600;
   font-size: 32px;
   line-height: 45px;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+}
+
+.benefits-title::before {
+  display: none;
 }
 
 .benefits-description {
@@ -302,34 +406,48 @@ body {
   margin-bottom: 94px;
 }
 
+.benefits-item:last-child .benefits-description {
+  margin: 0;
+}
+
+/* Слайдер */
 .slider-image {
   display: block;
   margin-bottom: 40px;
 }
 
+/* Обертка для кнопок и описания */
+.description-wrapper {
+  position: relative;
+}
+
 .slider-description {
-  margin: 0;
+  margin: 0 auto;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
+  width: 65%;
 }
 
+/* Услуги */
 .services {
   padding: 90px 312px;
   text-align: center;
 }
 
 .services-title {
-  margin: 0;
   margin-bottom: 115px;
-  font-weight: 600;
   font-size: 52px;
   line-height: 73px;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.services-title::before {
+  bottom: -50px;
+  left: calc(50% - 73px);
 }
 
 .services-button {
@@ -368,12 +486,13 @@ body {
 }
 
 .service-title {
-  margin: 0;
   margin-bottom: 20px;
-  font-weight: inherit;
   font-size: 24px;
   line-height: 34px;
-  text-transform: uppercase;
+}
+
+.service-title::before {
+  display: none;
 }
 
 .service-description {
@@ -384,24 +503,28 @@ body {
 }
 
 .service-link {
+  display: block;
   font-size: 18px;
   line-height: 25px;
   padding: 10px 20px;
 }
 
+/* Наши работы */
 .works {
   padding: 90px 0;
 }
 
 .works-title {
-  margin: 0;
   margin-bottom: 115px;
-  font-weight: 600;
   font-size: 52px;
   line-height: 73px;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   text-align: center;
+}
+
+.works-title::before {
+  bottom: -60px;
+  left: calc(50% - 73px);
 }
 
 .photos {
@@ -409,6 +532,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Вопросы */
 .questions {
   padding: 30px 642px 100px;
 }
@@ -417,6 +541,7 @@ body {
   position: relative;
 }
 
+/* Форма для вопроса */
 .questions-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -424,14 +549,16 @@ body {
 }
 
 .questions-title {
-  margin: 0;
   margin-bottom: 115px;
-  font-weight: 600;
   font-size: 52px;
   line-height: 73px;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   text-align: center;
+}
+
+.questions-title::before {
+  bottom: -60px;
+  left: calc(50% - 73px);
 }
 
 .form-input,
@@ -468,6 +595,7 @@ body {
   width: min-content;
 }
 
+/* Соц сети */
 .social {
   max-height: 150px;
   display: flex;
@@ -486,10 +614,11 @@ body {
   border: 1px solid #898989;
 }
 
+/* Контакты */
 .questions-contacts {
-  position: relative;
-  left: 335px;
-  bottom: 60px;
+  position: absolute;
+  right: 0;
+  top: 250px;
 
   width: 300px;
   display: flex;
@@ -504,15 +633,12 @@ body {
   letter-spacing: 0.05em;
 }
 
-.contacts-link:last-child {
-  margin-left: 45px;
-}
-
 .footer-divider {
   border-color: #898989;
   margin: 0;
 }
 
+/* Подвал */
 .footer {
   padding: 0 312px;
   display: flex;
