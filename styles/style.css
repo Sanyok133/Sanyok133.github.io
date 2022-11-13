@@ -77,6 +77,20 @@ body {
   color: inherit;
   background-color: #db3138;
   cursor: pointer;
+
+  transition: transform 0.1s linear;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:focus-visible {
+  outline: 3px solid #fff;
+}
+
+.button:active {
+  opacity: 0.8;
 }
 
 /* Кнопки слайдеров */
@@ -95,6 +109,8 @@ body {
   height: 50px;
   border: 3px solid #db3138;
   background: transparent url("../images/arrow-icon.svg") no-repeat center;
+
+  transition: transform 0.1s linear;
 }
 
 .button-prev {
@@ -105,6 +121,26 @@ body {
 .button-next {
   transform: rotate(135deg);
   margin-right: 15px;
+}
+
+/* Состояния кнопок слайдера */
+.button-prev:hover {
+  transform: scale(1.1) rotate(-45deg);
+}
+
+.button-next:hover {
+  transform: scale(1.1) rotate(135deg);
+}
+
+.button-next:focus-visible,
+.button-prev:focus-visible {
+  outline: none;
+  border: 3px solid #fff;
+}
+
+.button-next:active,
+.button-prev:active {
+  opacity: 0.8;
 }
 
 /* ссылки */
@@ -154,17 +190,49 @@ body {
 .navigation-link {
   display: block;
   padding: 40px 20px;
+  transition: transform 0.1s linear;
+}
+
+/* Состояния ссылок */
+.navigation-link:hover {
+  color: #cdb7b7;
+  transform: scale(1.1);
+}
+
+.navigation-link:focus-visible {
+  outline: 2px solid #db3138;
+}
+
+.navigation-link:active {
+  color: #a18f8f;
 }
 
 /* Кнопка меню */
 .navigation-button {
   box-sizing: border-box;
-  min-width: 50px;
+  min-width: 100px;
   min-height: 109px;
   padding: 40px 20px;
-  background: url("../images/menu-icon.svg") no-repeat center;
   text-decoration: none;
+  text-align: center;
   color: inherit;
+}
+
+.navigation-button svg {
+  fill: #db3138;
+  transition: transform 0.1s linear;
+}
+
+.navigation-button:hover svg {
+  transform: scale(1.1);
+}
+
+.navigation-button:focus-visible {
+  outline: 2px solid #db3138;
+}
+
+.navigation-button:active svg {
+  fill-opacity: 0.7;
 }
 
 /* Блок герой */
@@ -190,6 +258,7 @@ body {
   margin-bottom: 40px;
   font-size: 40px;
   line-height: 48px;
+  letter-spacing: 0.03em;
 }
 
 .hero-link {
@@ -300,6 +369,7 @@ body {
 }
 
 .achievements-item:last-child {
+  background: url("../images/cup-icon.svg") no-repeat 50% 25px;
   padding-top: 98px;
 }
 
@@ -378,6 +448,18 @@ body {
   position: relative;
 }
 
+.benefits-item:nth-child(1) {
+  background: url("../images/benefits-icons/benefits-icon-1.svg") no-repeat;
+}
+
+.benefits-item:nth-child(2) {
+  background: url("../images/benefits-icons/benefits-icon-2.svg") no-repeat;
+}
+
+.benefits-item:nth-child(3) {
+  background: url("../images/benefits-icons/benefits-icon-3.svg") no-repeat;
+}
+
 .benefits-item:not(:last-child)::before {
   content: "";
   position: absolute;
@@ -411,6 +493,24 @@ body {
 }
 
 /* Слайдер */
+.slider-block {
+  width: 636px;
+  height: 550px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.slider-line-first,
+.slider-line-second {
+  position: relative;
+  left: 0;
+  width: 1908px;
+  display: flex;
+
+  transition: all 1s ease;
+}
+
+
 .slider-image {
   display: block;
   margin-bottom: 40px;
@@ -436,6 +536,22 @@ body {
 .services {
   padding: 90px 312px;
   text-align: center;
+}
+
+.services-item:nth-child(1) {
+  background: url("../images/benefits-icons/benefits-icon-4.svg") no-repeat center 86px;
+}
+
+.services-item:nth-child(2) {
+  background: url("../images/benefits-icons/benefits-icon-1.svg") no-repeat center 86px;
+}
+
+.services-item:nth-child(3) {
+  background: url("../images/benefits-icons/benefits-icon-2.svg") no-repeat center 86px;
+}
+
+.services-item:nth-child(4) {
+  background: url("../images/benefits-icons/benefits-icon-3.svg") no-repeat center 86px;
 }
 
 .services-title {
@@ -573,6 +689,8 @@ body {
   line-height: 22px;
   letter-spacing: 0.05em;
   color: inherit;
+
+  transition: transform 0.1s linear;
 }
 
 .form-input::placeholder,
@@ -586,6 +704,19 @@ body {
   grid-column: 1 / -1;
   min-height: 150px;
   box-sizing: border-box;
+}
+
+/* Состояния полей */
+.form-input:hover,
+.form-textarea:hover {
+  border: 1px solid #db3138;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border: 1px solid #db3138;
+  transform: scale(1.03);
 }
 
 .form-button {
@@ -612,6 +743,31 @@ body {
   width: 40px;
   height: 40px;
   border: 1px solid #898989;
+
+  transition: transform 0.1s linear;
+}
+
+.social-link:nth-child(1) {
+  background: url("../images/social-icons/telegram-icon.svg") no-repeat center;
+}
+
+.social-link:nth-child(2) {
+  background: url("../images/social-icons/vk-icon.svg") no-repeat center;
+}
+
+.social-link:nth-child(3) {
+  background: url("../images/social-icons/youtube-icon.svg") no-repeat center;
+}
+
+/* Состояния ссылок */
+.social-link:hover {
+  border: 1px solid #db3138;
+}
+
+.social-link:focus-visible {
+  outline: none;
+  border: 1px solid #db3138;
+  transform: scale(1.1);
 }
 
 /* Контакты */
@@ -631,6 +787,44 @@ body {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.05em;
+}
+
+.contacts-link {
+  position: relative;
+  margin-left: 30px;
+
+}
+
+.contacts-link svg {
+  position: absolute;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: transform 0.1s linear;
+}
+
+.contacts-link:hover svg {
+  transform: translateY(-5px);
+  fill: #c4c4c4;
+}
+
+.contacts-link:hover {
+  color: #c4c4c4;
+}
+
+.contacts-link:focus-visible {
+  outline: none;
+}
+
+.contacts-link:focus-visible svg {
+  outline: none;
+  fill: #db3138;
+  transform: translateY(-5px);
+}
+
+.contacts-link:active svg {
+  fill: #a92529;
 }
 
 .footer-divider {
@@ -653,4 +847,5 @@ body {
   text-transform: uppercase;
   opacity: 0.5;
   margin-right: 187px;
+  min-width: max-content;
 }

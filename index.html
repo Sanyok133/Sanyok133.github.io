@@ -34,6 +34,9 @@
 
         <a class="navigation-button" href="#">
           <span class="visually-hidden">menu-button</span>
+          <svg width="50" height="25" viewBox="0 0 50 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0h40v3H10zM0 11h40v3H0zM10 22h40v3H10z" />
+          </svg>
         </a>
       </header>
 
@@ -52,8 +55,8 @@
 
             <div class="contacts-cell">
               <h3 class="title contacts-title">Phone:</h3>
-              <a class="link contacts-description" href="tel:89656969066">+7 (965) 696-90-67</a>
-              <a class="link contacts-description" href="tel:89656969066">8-965-696-90-67</a>
+              <a class="link contacts-description" href="tel:89656969066" tabindex="-1">+7 (965) 696-90-67</a>
+              <a class="link contacts-description" href="tel:89656969066" tabindex="-1">8-965-696-90-67</a>
             </div>
 
             <div class="contacts-cell">
@@ -192,8 +195,16 @@
           <section class="slider">
             <h2 class="visually-hidden">Slider</h2>
 
-            <img class="slider-image" src="images/slider-images/slider-image-1.jpg" alt="Sport BMW" width="636"
-              height="550">
+            <div class="slider-block">
+              <div class="slider-line-first">
+                <img class="slider-image" src="images/slider-images/slider-image-1.jpg" alt="Sport BMW" width="636"
+                  height="550">
+                <img class="slider-image" src="images/slider-images/slider-image-2.jpg" alt="Sport Mercedes" width="636"
+                  height="550">
+                <img class="slider-image" src="images/slider-images/slider-image-3.jpg" alt="Sport Mercedes" width="636"
+                  height="550">
+              </div>
+            </div>
 
             <div class="description-wrapper">
               <p class="slider-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor
@@ -201,11 +212,11 @@
                 feugiat est. Consectetur lectus.</p>
 
               <div class="button-wrapper">
-                <button class="button button-prev">
+                <button class="button button-prev button-prev-first">
                   <span class="visually-hidden">Previous image</span>
                 </button>
 
-                <button class="button button-next">
+                <button class="button button-next button-next-first">
                   <span class="visually-hidden">Next image</span>
                 </button>
               </div>
@@ -252,19 +263,29 @@
         <div class="benefits-wrapper">
           <section class="slider">
             <h2 class="visually-hidden">Slider</h2>
-            <img class="slider-image" src="images/slider-images/slider-image-2.jpg" alt="Sport Mercedes" width="636"
-              height="550">
+
+            <div class="slider-block">
+              <div class="slider-line-second">
+                <img class="slider-image" src="images/slider-images/slider-image-1.jpg" alt="Sport BMW" width="636"
+                  height="550">
+                <img class="slider-image" src="images/slider-images/slider-image-2.jpg" alt="Sport Mercedes" width="636"
+                  height="550">
+                <img class="slider-image" src="images/slider-images/slider-image-3.jpg" alt="Sport Mercedes" width="636"
+                  height="550">
+              </div>
+            </div>
+
             <div class="description-wrapper">
               <p class="slider-description">Neque metus vitae urna purus aliquam. Felis nullam pellentesque ac mi
                 commodo,
                 amet, porta in. Dui.</p>
 
               <div class="button-wrapper">
-                <button class="button button-prev">
+                <button class="button button-prev button-prev-second">
                   <span class="visually-hidden">Previous image</span>
                 </button>
 
-                <button class="button button-next">
+                <button class="button button-next button-next-second">
                   <span class="visually-hidden">Next image</span>
                 </button>
               </div>
@@ -350,19 +371,35 @@
                 <span class="visually-hidden">Telegram</span>
               </a>
               <a href="" class="social-link">
-                <span class="visually-hidden">Youtube</span>
+                <span class="visually-hidden">Vkontakte</span>
               </a>
               <a href="" class="social-link">
-                <span class="visually-hidden">Vkontakte</span>
+                <span class="visually-hidden">Youtube</span>
               </a>
             </div>
 
             <div class="questions-contacts">
               <a class="link contacts-link"
                 href="https://www.google.com/maps/place/New+York,+NY,+USA/@40.6181525,-73.7660112,9z/data=!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728?hl=en">Eu
-                faucibus et rutrum fringilla orci nunc</a>
-              <a class="link contacts-link" href="tel:89656969066">8 (965) 696-90-66</a>
-              <a class="link contacts-link" href="mailto:kozyuckov.alex@gmail.com">test@test.ru</a>
+                faucibus et rutrum fringilla orci nunc
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 1.5a8.26 8.26 0 0 0-6.33 13.54L12 22.5l6.33-7.46.26-.34A8.26 8.26 0 0 0 12 1.5Zm0 11.25a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
+                </svg></a>
+              <a class="link contacts-link" href="tel:89656969066">
+                8 (965) 696-90-66
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 20c-8.53.01-15-6.54-15-15a1 1 0 0 1 1-1h2.64a1 1 0 0 1 .99.85c.17 1.18.51 2.32 1.01 3.4l.1.22a.7.7 0 0 1-.22.88 1.93 1.93 0 0 0-.5 2.67c.8 1.15 1.8 2.15 2.96 2.96.92.63 2.1.32 2.67-.5a.7.7 0 0 1 .88-.23l.22.1c1.08.5 2.22.85 3.4 1.02a1 1 0 0 1 .85 1V19a1 1 0 0 1-1 1Z" />
+                </svg>
+              </a>
+              <a class="link contacts-link" href="mailto:kozyuckov.alex@gmail.com">
+                test@test.ru
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m2.57 8.68 9.13 4.75a.64.64 0 0 0 .6 0l9.13-4.75v8.25a2.79 2.79 0 0 1-2.63 2.78H5.36a2.79 2.79 0 0 1-2.78-2.62V8.68Zm2.79-4.4h13.28a2.79 2.79 0 0 1 2.78 2.63v.32L12 12.13l-9.43-4.9v-.16A2.79 2.79 0 0 1 5.2 4.3h13.44H5.36Z" />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
@@ -396,7 +433,7 @@
         </div>
       </footer>
     </div>
-
+    <script src="script.js"></script>
   </body>
 
 </html>
